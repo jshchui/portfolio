@@ -12,7 +12,7 @@ h2 {
   font-size: 1em;
 }
 
-p {
+p, ul li {
   font-size: 14px;
   line-height: 2em;
 }
@@ -310,6 +310,7 @@ a {
 }
 
 .project__image-caption {
+  margin-top: -1em;
   text-align: center;
 }
 

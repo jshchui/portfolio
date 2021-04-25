@@ -6,6 +6,7 @@ import ProjectFanswifi from './project_fanswifi';
 import ProjectCodedrillz from './project_codedrillz';
 import ProjectNauticalcats from './project_nauticalcats';
 import ProjectRediscoverindigo from './project_rediscoverindigo';
+import ProjectPackager from './project_packager';
 import ContactPage from './contact';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
@@ -20,6 +21,8 @@ class Project1 extends Component {
   chooseProject(projectNumber) {
 
     switch(projectNumber) {
+      case `${this.props.hostName}packager`:
+        return <ProjectPackager />
       case `${this.props.hostName}haikugenerator`:
         return <ProjectHaikugenerator />
       case `${this.props.hostName}werewolf`:

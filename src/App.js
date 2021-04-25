@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TriangleLogo from './assets/triangle';
 import FanswifiLogo from './assets/fanswifi';
+import PackagerLogo from './assets/packager';
 import WerewolfLogo from './assets/werewolf';
 import CodedrillzLogo from './assets/codedrillz';
 import IndigoLogo from './assets/indigo';
@@ -142,6 +143,12 @@ class App extends Component {
                 ><rect y="18.77" width="25" height="2.56"/>
               </svg>
             </button>
+
+            <Link className="app-body__block" to={`/${this.state.hostName}packager`} onClick={() => this.toggleProject('packager')}>
+              <PackagerLogo className='App-logo' ariaLabel='logo' />
+              {/* <div style={{maxWidth: '200px', fontSize: '13px'}}>Website created for their exhibition in Singapore to clearly articulate Fanswifi's business values</div> */}
+              <div className="app-body__title">Packager</div>
+            </Link>
 
             <Link className="app-body__block" to={`/${this.state.hostName}fanswifi`} onClick={() => this.toggleProject('fanswifi')}>
               <FanswifiLogo className='App-logo' ariaLabel='logo' />

@@ -38,7 +38,7 @@ class ProjectTriangle extends Component {
 					</div>
 				</div>
 
-				<iframe className="project__video" width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Triangle Demo"></iframe>
+				<iframe className="project__video" width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen title="Triangle Demo"></iframe>
 			</div>
 		)
 	}

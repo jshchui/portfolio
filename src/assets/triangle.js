@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './assetcss/triangle.css';
+import './assetcss/triangle.scss';
 
 class TriangleLogo extends Component {
 	render() {

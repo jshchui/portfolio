@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.9ad51de8.css",
-    "main.js": "/portfolio/static/js/main.8e01d97f.js",
+    "main.js": "/portfolio/static/js/main.4cadec9b.js",
     "static/media/me.png": "/portfolio/static/media/me.94d3724c4f9a7b72f05f.png",
     "static/media/homepage.jpg": "/portfolio/static/media/homepage.b9dfac5ac3c1c43939b8.jpg",
     "static/media/whois.JPG": "/portfolio/static/media/whois.c60d733f112e5df27b2c.JPG",
@@ -31,7 +31,7 @@
     "static/media/journey.jpg": "/portfolio/static/media/journey.0854fd68640c8a3e1724.jpg",
     "static/media/support2.jpg": "/portfolio/static/media/support2.b49e5220f3a82d1b5608.jpg",
     "static/media/IMG2.JPG": "/portfolio/static/media/IMG2.8df21a6cead894ff881e.JPG",
-    "static/media/resume.pdf": "/portfolio/static/media/resume.7d162dfbb4f33bdc20e9.pdf",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.4f6fcab193d3eacef72f.pdf",
     "static/media/customerjourneyframework.JPG": "/portfolio/static/media/customerjourneyframework.6d30a651a9a9f2a54c1c.JPG",
     "static/media/whale.jpg": "/portfolio/static/media/whale.172ecee6b1e8d531b38f.jpg",
     "static/media/brandshift2.jpg": "/portfolio/static/media/brandshift2.5fd35046319e6583cea4.jpg",
@@ -59,10 +59,10 @@
     "static/media/IMG3.JPG": "/portfolio/static/media/IMG3.2530ad7bd91bd52cd71f.JPG",
     "index.html": "/portfolio/index.html",
     "main.9ad51de8.css.map": "/portfolio/static/css/main.9ad51de8.css.map",
-    "main.8e01d97f.js.map": "/portfolio/static/js/main.8e01d97f.js.map"
+    "main.4cadec9b.js.map": "/portfolio/static/js/main.4cadec9b.js.map"
   },
   "entrypoints": [
     "static/css/main.9ad51de8.css",
-    "static/js/main.8e01d97f.js"
+    "static/js/main.4cadec9b.js"
   ]
 }

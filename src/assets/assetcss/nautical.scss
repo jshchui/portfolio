@@ -1,0 +1,22 @@
+.logo-container--nautical {
+  transform-origin: center center;
+  min-width: 135px;
+  max-width: 135px;
+
+  transition: 0.4s all;
+}
+
+.cls-nautical {
+  fill: grey;
+}
+
+.app-body__block:hover .logo-container--nautical {
+  animation: nautical-animation 1s infinite;
+  // transform: translateY(-20px);
+}
+
+@keyframes nautical-animation {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}

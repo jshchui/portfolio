@@ -1,0 +1,40 @@
+.logo-container--packager {
+  min-width: 135px;
+  max-width: 135px;
+}
+
+.cls-packager-1 {
+  fill: #d3d3d3;
+  stroke: #d3d3d3;
+}
+
+.cls-packager-2 {
+  fill: gray;
+  stroke: gray;
+}
+
+.cls-packager-3 {
+  fill: #f2f2f2;
+}
+
+.cls-packager-1, .cls-packager-2 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+
+.app-body__block:hover .logo-container--packager {
+  position: absolute;
+  // top: 35px;
+  animation: packager-animation 1s infinite;
+  // transform: translateY(-20px);
+}
+
+@keyframes packager-animation {
+  0% { rotate: -5deg; }
+
+  50% { rotate: 5deg; }
+
+  100% { rotate: -5deg; }
+}

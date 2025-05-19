@@ -1,0 +1,26 @@
+:root {
+  /* ─── Base Palette ─────────────────────────────────────────────────────────── */
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #888888;
+  --light-gray: #eeeeee;
+  --dark-gray: #333333;
+  --accent: #5f4dee;
+
+  /* ─── Tone Variants via color-mix() ───────────────────────────────────────── */
+  --accent-light: color-mix(in srgb, var(--accent) 20%, var(--white));
+  --accent-dark: color-mix(in srgb, var(--accent) 20%, var(--black));
+
+  /* ─── Semantic Tokens (auto-switching light/dark) ─────────────────────────── */
+  --font-color: light(var(--gray), var(--white));
+  --font-color-flipped: dark(var(--gray), var(--black));
+
+  --title-color: light(var(--black), var(--light-gray));
+  --title-color-flipped: dark(var(--black), var(--dark-gray));
+
+  --theme-color: light(var(--accent), var(--accent-light));
+  --theme-color-flipped: dark(var(--accent), var(--accent-dark));
+
+  --theme-color-light: light(var(--accent-light), var(--accent-dark));
+  --theme-color-light-flipped: dark(var(--accent-light), var(--accent-dark));
+}

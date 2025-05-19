@@ -1,0 +1,32 @@
+.logo-container--fanswifi {
+  min-width: 175px;
+  max-width: 175px;
+}
+
+.cls-fanswifi {
+  fill: grey;
+}
+
+.app-body__block:hover {
+  .second-wave {
+    animation: second-wave 1s infinite;
+  }
+  
+  .third-wave {
+    animation: third-wave 1s infinite;
+  }
+}
+
+@keyframes third-wave {
+  30% { opacity: 1; }
+  35% { opacity: 0.1; }
+  80% { opacity: 0.1; }
+  85% {opacity: 1; }
+}
+
+@keyframes second-wave {
+  40% { opacity: 1; }
+  45% { opacity: 0.1; }
+  70% { opacity: 0.1; }
+  75% { opacity: 1; }
+}

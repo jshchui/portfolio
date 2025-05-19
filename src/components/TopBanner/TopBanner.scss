@@ -1,0 +1,73 @@
+// .top-banner {
+//     font-family: 'Josefin Slab', sans-serif;
+//     height: 300px;
+
+//     // font-size: 100px;
+//     display: flex;
+//     align-items: center;
+
+//     // text-wrap: nowrap;
+
+//     color: grey;
+
+//     display: flex;
+//     gap: 2rem;
+// }
+
+.chinese {
+  font-weight: 100;
+  font-size: 85px;
+  font-family: "Noto Sans Simplified Chinese", sans-serif;
+}
+
+.top-banner {
+  font-family: "OTBrut", sans-serif;
+  color: #fff;
+  background: grey;
+
+  &__content {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    // text-transform: uppercase;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+    p {
+      font-size: 0.6rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+.top-banner__track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+  padding: 5rem 0 3rem;
+}
+
+.top-banner__inner {
+  display: flex;
+  font-size: 100px;
+  white-space: nowrap;
+}
+
+.top-banner__inner span {
+  display: inline-block;
+  margin-right: 2rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

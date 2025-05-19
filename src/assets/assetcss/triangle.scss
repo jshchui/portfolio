@@ -1,0 +1,124 @@
+/* TRIANGLE ANIMATION */
+.logo-container--triangle {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.cls-2 {
+  fill: grey;
+}
+
+.block-one, .block-two, .block-three {
+  shape-rendering: geometricPrecision;
+}
+
+.screen-one {
+  fill: lightgrey;
+  transform: translate(0, -55px);
+}
+
+.screen-two {
+  fill: lightgrey;
+  transform: translate(0, -200px);
+}
+
+.screen-three {
+  fill: lightgrey;
+  transform: translate(0, -200px);
+}
+
+.block-one {
+  transform: translate(0, -55px);
+}
+
+.block-two {
+  transform: translate(0, -200px);
+}
+
+.block-three {
+  transform: translate(0, -200px);
+}
+
+.app-body__block:hover {
+  .screen-one {
+    animation: screen1 3s infinite;
+  }
+  
+  .screen-two {
+    animation: screen2 3s infinite;
+  }
+  
+  .screen-three {
+    animation: screen3 3s infinite;
+  }
+  
+  .block-one {
+    animation: box1 3s infinite;
+  }
+  
+  .block-two {
+    animation: box2 3s infinite;
+  }
+  
+  .block-three {
+    animation: box3 3s infinite;
+  }
+}
+
+@keyframes screen1 {
+  0% { fill: lightgrey; transform: translate(0, -55px); }
+  20% { transform: translate(0, -55px); }
+  37% { fill: lightgrey; transform: translate(0, 0); }
+  40% { fill: #f1f1f1; }
+  85% { fill: #f1f1f1; }
+  88% { fill: lightgrey; transform: translate(0, 0); }
+  100% { transform: translate(0, -55px); }
+}
+
+@keyframes screen2 {
+  0% { transform: translate(0, -200px); }
+  25% { transform: translate(0, -200px); }
+  37% { fill: lightgrey; }
+  40% { fill: #f1f1f1; transform: translate(0, 0); }
+  85% { fill: #f1f1f1; transform: translate(0, 0); }
+  88% { fill: lightgrey; }
+  95% { transform: translate(0, -200);  }
+  100% { transform: translate(0, -200);  }
+}
+
+@keyframes screen3 {
+  0% { transform: translate(0, -200px);  }
+  50% { transform: translate(0, -200px);  }
+  62% { fill: lightgrey; }
+  65% { fill: #f1f1f1; transform: translate(0, 0); }
+  80% { fill: #f1f1f1; transform: translate(0, 0); }
+  83% { fill: lightgrey; }
+  100% { transform: translate(0, -200); }
+}
+
+@keyframes box1 {
+  0% { transform: translate(0, -55px); }
+  20% { transform: translate(0, -55px); }
+  37% { transform: translate(0, 0); }
+  88% { transform: translate(0, 0); }
+  100% { trasnform: translate(0, -55px); }
+}
+
+@keyframes box2 {
+  0% { transform: translate(0, -200px); }
+  25% { transform: translate(0, -200px); }
+  40% { transform: translate(0, 0); }
+  85% { transform: translate(0, 0); }
+  95% { transform: translate(0, -200); }
+  100% { transform: translate(0, -200); }
+}
+
+@keyframes box3 {
+  0% { transform: translate(0, -200px); }
+  50% { transform: translate(0, -200px); }
+  65% { transform: translate(0, 0); }
+  80% { transform: translate(0, 0); }
+  100% { transform: translate(0, -200); }
+}
+
+/* TRIANGLE ANIMATION END */

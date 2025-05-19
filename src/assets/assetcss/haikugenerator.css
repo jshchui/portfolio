@@ -1,0 +1,19 @@
+.logo-container--haiku-generator {
+  min-width: 105px;
+  max-width: 105px; }
+
+.cls-haiku-generator {
+  fill: grey; }
+
+.app-body__block:hover .feather-blink {
+  animation: feather-blink 1s infinite; }
+
+@keyframes feather-blink {
+  0% {
+    opacity: 1; }
+  33% {
+    opacity: 0.6; }
+  33% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }

@@ -17,24 +17,33 @@
   fill: #f2f2f2;
 }
 
-.cls-packager-1, .cls-packager-2 {
+.cls-packager-1,
+.cls-packager-2 {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2px;
 }
 
-
 .app-body__block:hover .logo-container--packager {
-  position: absolute;
-  // top: 35px;
   animation: packager-animation 1s infinite;
-  // transform: translateY(-20px);
 }
 
 @keyframes packager-animation {
-  0% { rotate: -5deg; }
-
-  50% { rotate: 5deg; }
-
-  100% { rotate: -5deg; }
+  0%,
+  100% {
+    rotate: 0deg;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    rotate: 5deg;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    rotate: 0deg;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    rotate: -5deg;
+    animation-timing-function: ease-in;
+  }
 }

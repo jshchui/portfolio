@@ -3,20 +3,34 @@ import "./App.scss";
 import PackagerLogo from "./assets/packager";
 import TriangleLogo from "./assets/triangle";
 import WerewolfLogo from "./assets/werewolf";
-import Project from "./components/projects";
+import IndigoLogo from "./assets/indigo";
+import FanswifiLogo from "./assets/fanswifi";
+import Project from "./components/Project/projects";
 import Logo from "./components/logo";
 
 import { TopBanner } from "./components/TopBanner/TopBanner";
+import { Footer } from "./components/Footer/Footer";
+import MouseTransition from "./components/MouseTransition/MouseTransition";
 
 import Resume from "./assets/resume.pdf";
 
 import { Routes, Route, Link } from "react-router";
+import NauticalLogo from "./assets/nautical";
 
 function App() {
   const projectContainerRef = useRef(null);
 
   const [hostName, setHostName] = useState("");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [currentPageKey, setCurrentPageKey] = useState("A");
+
+  // State to control the visibility and data for the transition
+  const [transitionState, setTransitionState] = useState({
+    isActive: false,
+    clickX: 0,
+    clickY: 0,
+    nextPage: null,
+  });
 
   const [projectShowing, setProjectShowing] = useState(false);
   const [currentProject, setCurrentProject] = useState("");
@@ -27,26 +41,71 @@ function App() {
     {
       key: "packager",
       title: "Packager",
-      Logo: <PackagerLogo className="App-logo" aria-label="logo" />,
+      label: "App",
+      Logo: <PackagerLogo aria-label="logo" />,
     },
-    // { key: 'fanswifi', title: 'Fanswifi', Logo: FanswifiLogo },
+    {
+      key: "fanswifi",
+      title: "Fanswifi",
+      label: "Web",
+      Logo: <FanswifiLogo aria-label="logo" />,
+    },
     // { key: 'haikugenerator', title: 'Haiku Generator', Logo: HaikugeneratorLogo },
     {
       key: "werewolf",
       title: "Werewolf",
-      Logo: <WerewolfLogo className="App-logo" aria-label="logo" />,
+      label: "Web",
+      Logo: <WerewolfLogo aria-label="logo" />,
     },
     {
       key: "triangle",
       title: "Triangle",
-      Logo: <TriangleLogo className="App-logo" aria-label="logo" />,
+      label: "Product Dsgn",
+      Logo: <TriangleLogo aria-label="logo" />,
     },
     // { key: 'codedrillz', title: 'Codedrillz', Logo: CodedrillzLogo },
-    // { key: 'rediscoverindigo', title: 'Rediscover Indigo', Logo: IndigoLogo },
-    // { key: 'nauticalcats', title: 'Nautical Cats', Logo: NauticalLogo },
+    {
+      key: "rediscoverindigo",
+      title: "Rediscover Indigo",
+      label: "UX / UI Dsgn",
+      Logo: <IndigoLogo aria-label="logo" />,
+    },
+    {
+      key: "nauticalcats",
+      title: "Nautical Cats",
+      label: "Game Dsgn",
+      Logo: <NauticalLogo aria-label="logo" />,
+    },
   ];
 
+  // const handlePageSwapNeeded = useCallback(() => {
+  //   setCurrentPageKey(transitionState.nextPage);
+  // }, [transitionState.nextPage]);
+
+  const handlePageSwapNeeded = useCallback(() => {
+    if (!transitionState.nextPage) {
+      setProjectShowing(false);
+      return;
+    }
+    setCurrentProject(`${hostName}${transitionState.nextPage}`);
+    setProjectShowing(true);
+    // setView(transitionState.nextView);
+    // setActiveProject(transitionState.nextActiveProject);
+  }, [transitionState.nextPage, hostName]);
+
+  // Callback for when the entire transition (including reveal) is finished
+  const handleTransitionComplete = useCallback(() => {
+    setTransitionState({
+      isActive: false,
+      clickX: 0,
+      clickY: 0,
+      nextPage: null,
+    });
+  }, []);
+  console.log("hostName: ", hostName);
+
   useEffect(() => {
+    // this is for lightbox
     // document.addEventListener('click', handleClick);
     const pathName = window.location?.pathname || "";
     if (pathName.includes("portfolio")) {
@@ -65,7 +124,10 @@ function App() {
   );
 
   const toggleProject = useCallback(
-    (projectName) => {
+    (projectName, event) => {
+      // event.preventDefault();
+      console.log("projectName: ", projectName);
+      console.log("event: ", event);
       if (projectShowing && projectName === `${hostName}contact`) {
         setProjectShowing(false);
         setTimeout(() => {
@@ -75,10 +137,22 @@ function App() {
         return;
       }
       if (projectShowing) {
-        setProjectShowing(false);
+        // setProjectShowing(false);
+        setTransitionState({
+          isActive: true,
+          clickX: event.clientX,
+          clickY: event.clientY,
+          nextPage: null,
+        });
       } else if (projectName !== "nothing") {
-        setCurrentProject(`${hostName}${projectName}`);
-        setProjectShowing(true);
+        // setCurrentProject(`${hostName}${projectName}`);
+        // setProjectShowing(true);
+        setTransitionState({
+          isActive: true,
+          clickX: event.clientX,
+          clickY: event.clientY,
+          nextPage: projectName,
+        });
       }
     },
     [projectShowing, hostName]
@@ -92,7 +166,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${projectShowing ? "App--hide-scroll" : ""}`}>
       {/* Mobile Navigation */}
       <TopBanner />
       {/* <div className={showMobileMenu ? "nav nav--show-mobile" : "nav"}>
@@ -163,19 +237,26 @@ function App() {
           ◆
         </span>
       </h2>
+      <div className="app-body__selected-works">
+        <p className="app-body__selected-works-title">SELECTED WORKS</p>
+      </div>
       <div className="app-body">
-        {projectData.map(({ key, title, Logo }) => (
+        {projectData.map(({ key, title, label, Logo }) => (
           <Link
             key={key}
             className="app-body__block"
             to={`/${hostName}${key}`}
-            onClick={() => toggleProject(key)}
+            onClick={(e) => toggleProject(key, e)}
           >
-            {Logo}
-            <div className="app-body__title">{title}</div>
+            <div className="app-body__logo">{Logo}</div>
+            <div className="app-body__title">
+              <span>{title}</span>
+              <span className="app-body__label">{label}</span>
+            </div>
           </Link>
         ))}
       </div>
+      <Footer hostName={hostName} toggleProject={toggleProject} />
       <Project
         className={
           projectShowing ? "project project--show" : "project project--hide"
@@ -186,6 +267,14 @@ function App() {
         projectRef={projectContainerRef}
         hostName={hostName}
       />
+      {transitionState.isActive && (
+        <MouseTransition
+          clickX={transitionState.clickX}
+          clickY={transitionState.clickY}
+          onPageSwapNeeded={handlePageSwapNeeded}
+          onTransitionEnd={handleTransitionComplete}
+        />
+      )}
     </div>
   );
 }

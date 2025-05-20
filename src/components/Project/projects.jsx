@@ -1,15 +1,17 @@
 import { useCallback } from "react";
 import { Link } from "react-router";
 
+import "./projects.scss";
+
 // import ProjectHaikugenerator from "./project_haikugenerator";
-import ProjectTriangle from "./project_triangle";
-import ProjectWerewolf from "./project_werewolf";
-// import ProjectFanswifi from "./project_fanswifi";
+import ProjectTriangle from "../project_triangle";
+import ProjectWerewolf from "../project_werewolf";
+import ProjectFanswifi from "../project_fanswifi";
 // import ProjectCodedrillz from "./project_codedrillz";
-// import ProjectNauticalcats from "./project_nauticalcats";
-// import ProjectRediscoverindigo from "./project_rediscoverindigo";
-import ProjectPackager from "./project_packager";
-import ContactPage from "./contact";
+import ProjectNauticalcats from "../project_nauticalcats";
+import ProjectRediscoverindigo from "../project_rediscoverindigo";
+import ProjectPackager from "../project_packager";
+import ContactPage from "../contact";
 
 export default function Project({
   className,
@@ -44,12 +46,13 @@ export default function Project({
     }
   }, [currentProject, hostName]);
 
+  console.log("project.jsx hostName: ", hostName);
   return (
     <div className={className} ref={projectRef}>
       <Link
         to={`/${hostName}`}
         className="project__close-button"
-        onClick={toggleProject}
+        onClick={(e) => toggleProject("nothing", e)}
       >
         <div className="project__close-button">
           <svg

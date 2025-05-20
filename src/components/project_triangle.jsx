@@ -5,14 +5,31 @@ export default function ProjectTriangle() {
   return (
     <div className="project__content">
       <h1 className="project__title">Tri-angle</h1>
+      <div className="project__eyebrow-container">
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>MY ROLE: PROTOTYPE x
+          DESIGN <span className="project__eyebrow-symbol">◆</span>
+        </p>
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>TECH: ILLUSTRATOR x
+          COREL DRAW x SOLID WORKS
+          <span className="project__eyebrow-symbol">◆</span>
+        </p>
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>PROJECT: PRODUCT
+          DESIGN <span className="project__eyebrow-symbol">◆</span>
+        </p>
+      </div>
+
       <p>
         Tri-Angle is 3 triangular/modular lamps that can be placed at different
         angles. Tri-Angle consists of three tri-angular shaped pieces that
         lights up when another modular piece is connected with it.
       </p>
+      <div className="project__divider">❋</div>
+
       <img className="project__image" src={Image1} alt="Triangle" />
 
-      <h2>Role</h2>
       <p>
         For this project, I was in charge of the prototyping and designing of
         the lamp. I diagramed the plans out for the lamp and laser cutted them
@@ -32,7 +49,7 @@ export default function ProjectTriangle() {
         alt="Triangle Lamp Process Builds"
       />
 
-      <div className="project__justify-flex">
+      {/* <div className="project__justify-flex">
         <div className="project__collaborators">
           <h3>Collaborators</h3>
           <p>Bobby Soetarto</p>
@@ -46,7 +63,7 @@ export default function ProjectTriangle() {
           <p>Corel Draw</p>
           <p>Solid Works</p>
         </div>
-      </div>
+      </div> */}
 
       <iframe
         className="project__video"

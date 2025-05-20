@@ -15,6 +15,21 @@ export default function ProjectWerewolf() {
   return (
     <div className="project__content">
       <h1 className="project__title">Werewolf</h1>
+      <div className="project__eyebrow-container">
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>MY ROLE: DESING x
+          DEVELOPMENT <span className="project__eyebrow-symbol">◆</span>
+        </p>
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>TECH: REACT x
+          FIREBASE DATABASE / CLOUD FUNCTIONS x ILLUSTRATOR
+          <span className="project__eyebrow-symbol">◆</span>
+        </p>
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>PROJECT: WEB APP{" "}
+          <span className="project__eyebrow-symbol">◆</span>
+        </p>
+      </div>
       <img className="project__image" src={Banner} alt="Werewolf Banner" />
 
       <p>
@@ -35,7 +50,7 @@ export default function ProjectWerewolf() {
         all the villagers.
       </p>
 
-      <div className="project__justify-flex">
+      {/* <div className="project__justify-flex">
         <a
           className="project__button"
           href="https://github.com/jshchui/fwnext"
@@ -52,15 +67,17 @@ export default function ProjectWerewolf() {
         >
           Site
         </a>
-      </div>
+      </div> */}
 
-      <div className="project__skills-used">
+      {/* <div className="project__skills-used">
         <h3>Technologies Used</h3>
         <p>ReactJS</p>
         <p>Firebase Realtime Database</p>
         <p>Fireblase Cloud Functions</p>
         <p>Illustrator</p>
-      </div>
+      </div> */}
+
+      <div className="project__divider">❋</div>
 
       <img className="project__image" src={Image1} alt="Werewolf Homescreen" />
       <img className="project__image" src={Image2} alt="Werewolf Gamescreen" />

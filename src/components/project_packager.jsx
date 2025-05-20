@@ -7,7 +7,32 @@ export default function ProjectPackager() {
   return (
     <div className="project__content">
       <h1 className="project__title">Banner Packager</h1>
-
+      <div className="project__eyebrow-container">
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>MY ROLE: DEVELOPMENT{" "}
+          <span className="project__eyebrow-symbol">◆</span>
+        </p>
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>TECH: NODE.JS x
+          ELECTRON x SOCKET.IO x HTML2CANVAS
+          <span className="project__eyebrow-symbol">◆</span>
+        </p>
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>PROJECT: WEB APP{" "}
+          <span className="project__eyebrow-symbol">◆</span>
+        </p>
+        <p className="project__eyebrow">
+          <span className="project__eyebrow-symbol">◆</span>LINK:{" "}
+          <a
+            href="https://github.com/jshchui/packager"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            GITHUB
+          </a>{" "}
+          <span className="project__eyebrow-symbol">◆</span>
+        </p>
+      </div>
       <img className="project__image" src={Img1} alt="Packager UI" />
       <p>
         The packager is an app that streamlines the finalization of web banners
@@ -47,6 +72,7 @@ export default function ProjectPackager() {
         to take hours now happens with a single click, completing the process in
         seconds.
       </p>
+      <div className="project__divider">❋</div>
 
       <img
         className="project__image"
@@ -68,31 +94,6 @@ export default function ProjectPackager() {
         alt="Backups generated after packaging"
       />
       <p className="project__image-caption">Backups generated</p>
-
-      <div className="project__justify-flex">
-        <a
-          className="project__button"
-          href="https://github.com/jshchui/packager"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </div>
-
-      <div className="project__skills-used">
-        <h3>Technologies Used</h3>
-        <p>Node.js</p>
-        <p>Electron</p>
-        <p>Socket.io</p>
-        <a
-          href="https://html2canvas.hertzen.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          html2canvas
-        </a>
-      </div>
     </div>
   );
 }

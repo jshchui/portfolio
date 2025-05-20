@@ -1,26 +1,37 @@
 :root {
+  color-scheme: light dark;
   /* ─── Base Palette ─────────────────────────────────────────────────────────── */
   --white: #ffffff;
   --black: #000000;
   --gray: #888888;
   --light-gray: #eeeeee;
   --dark-gray: #333333;
-  --accent: #5f4dee;
+  // --accent: #5f4dee;
+  --accent: var(--gray);
+
+  //   color save
+  // color: #3a3a3a; // h1-h3
 
   /* ─── Tone Variants via color-mix() ───────────────────────────────────────── */
   --accent-light: color-mix(in srgb, var(--accent) 20%, var(--white));
   --accent-dark: color-mix(in srgb, var(--accent) 20%, var(--black));
 
   /* ─── Semantic Tokens (auto-switching light/dark) ─────────────────────────── */
-  --font-color: light(var(--gray), var(--white));
-  --font-color-flipped: dark(var(--gray), var(--black));
+  --background-color: light-dark(var(--white), var(--dark-gray));
+  --shadow-color: light-dark(var(--dark-gray), var(--light-gray));
 
-  --title-color: light(var(--black), var(--light-gray));
-  --title-color-flipped: dark(var(--black), var(--dark-gray));
+  --font-color: light-dark(var(--gray), var(--white));
+  --font-color-flipped: light-dark(var(--white), var(--gray));
 
-  --theme-color: light(var(--accent), var(--accent-light));
-  --theme-color-flipped: dark(var(--accent), var(--accent-dark));
+  --title-color: light-dark(var(--gray), var(--light-gray));
+  --title-color-flipped: light-dark(var(--light-gray), var(--gray));
 
-  --theme-color-light: light(var(--accent-light), var(--accent-dark));
-  --theme-color-light-flipped: dark(var(--accent-light), var(--accent-dark));
+  --theme-color: light-dark(var(--accent), var(--accent-light));
+  --theme-color-flipped: light-dark(var(--accent), var(--accent-dark));
+
+  --theme-color-light: light-dark(var(--light-gray), var(--light-gray));
+  --theme-color-light-flipped: light-dark(
+    var(--accent-light),
+    var(--accent-dark)
+  );
 }

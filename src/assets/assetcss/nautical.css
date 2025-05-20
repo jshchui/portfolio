@@ -8,12 +8,25 @@
   fill: grey; }
 
 .app-body__block:hover .logo-container--nautical {
-  animation: nautical-animation 1s infinite; }
+  animation: nautical-smooth 1s infinite; 
+  transform-origin: center center;
+}
 
-@keyframes nautical-animation {
-  0% {
-    transform: rotate(-10deg); }
+@keyframes nautical-smooth {
+  0%, 100% {
+    rotate: 0deg;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    rotate: 10deg;
+    animation-timing-function: ease-in;
+  }
   50% {
-    transform: rotate(10deg); }
-  100% {
-    transform: rotate(-10deg); } }
+    rotate: 0deg;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    rotate: -10deg;
+    animation-timing-function: ease-in;
+  }
+}

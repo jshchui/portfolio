@@ -1,0 +1,19 @@
+// Diamond Transition SVG specific styles
+.diamond-transition-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; // Ensure it's on top
+  // display: none; is handled by inline style and GSAP
+
+  // The fill for the coverDiamondPath is set by GSAP in the component.
+  // The fill for the revealMaskPolygon is set to 'black' in the component.
+  // The rect in the mask is set to 'white' in the component.
+  // No additional SCSS is strictly needed for the polygons themselves unless you want strokes etc.
+}
+
+.diamond-poly {
+  fill: var(--theme-color);
+}

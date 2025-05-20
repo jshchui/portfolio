@@ -1,0 +1,21 @@
+@use "../../styles/main";
+@use "../../styles/fonts" as *;
+
+.footer {
+  font-family: "OTBrut", sans-serif;
+  color: var(--font-color-flipped);
+  background: var(--theme-color);
+
+  h2 {
+    color: var(--font-color-flipped);
+  }
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-evenly;
+
+  a {
+    color: var(--font-color-flipped);
+  }
+}

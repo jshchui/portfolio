@@ -1,15 +1,12 @@
-@use "./styles/fonts";
-
-* {
-  // font-family: 'Montserrat', sans-serif;
-}
+@use "./styles/main";
+@use "./styles/fonts" as *;
 
 h1,
 h2,
 h3 {
   text-align: center;
   font-weight: 400;
-  color: #3a3a3a;
+  color: var(--title-color);
 }
 
 h2 {
@@ -41,7 +38,7 @@ body,
   // padding: 5em 3em;
   box-sizing: border-box;
 
-  background-color: #fff;
+  background-color: var(--background-color);
   transition: 0.4s all;
 
   // box-shadow: 1px 1px 4px 1px lightgrey;
@@ -49,19 +46,18 @@ body,
 }
 
 .nav__logo {
-  fill: grey;
+  // REMOVE :MAYBE
+  fill: var(--theme-color);
   width: 50px;
 
   h3 {
     margin: 0;
-    color: grey;
     text-align: left;
     font-weight: bold;
     text-transform: uppercase;
   }
 
   &--mobile {
-    // display: none;
     width: 35px;
     position: absolute;
     left: 0;
@@ -94,7 +90,7 @@ body,
   font-weight: bold;
 
   a {
-    color: grey;
+    color: var(--font-color);
   }
 }
 
@@ -118,7 +114,11 @@ a {
   height: 100%;
   flex-direction: column;
 
-  // overflow: hidden;
+  overflow-x: hidden;
+
+  &--hide-scroll {
+    overflow: hidden;
+  }
 }
 
 // .App-logo {
@@ -134,17 +134,34 @@ a {
   grid-gap: 3em;
 
   width: 100%;
-  padding: 5em;
+  padding: 3rem 5rem;
   box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
   // overflow: auto;
 
-  background-color: white;
-  color: black;
+  // background-color: white;
+  // color: black;
 
   &:after {
     content: "";
     padding-bottom: 2em;
     grid-column: 1;
+  }
+
+  &__selected-works {
+    padding: 0 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__selected-works-title {
+    @include project-label;
+    text-align: right;
+    color: var(--title-color);
+    border-bottom: solid 1px var(--theme-color-light);
   }
 
   &__projects {
@@ -158,31 +175,53 @@ a {
     font-size: 4rem;
     font-family: "OTBrut", serif;
     line-height: 1;
-    margin: 0 auto;
+    margin: 3rem auto 1rem;
     padding: 2rem 0;
-    color: #555;
+    color: var(--title-color);
     letter-spacing: 0.05em;
   }
 }
 
 .title-symbols {
+  color: var(--title-color);
   font-size: 1.5rem;
-  opacity: 0.6;
   transform: translateY(0.1em); // slight vertical alignment tweak
 }
 
 .title-text {
   display: inline-block;
+  position: relative;
+  translate: 0 6px;
 }
 .app-body__title {
-  position: absolute;
-  color: grey;
+  border-bottom: solid 1px var(--theme-color-light);
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: var(--title-color);
+
+  // color: grey;
   // opacity: 0;
-  font-size: 0.85em;
+  font-size: 1.25rem;
+  text-transform: uppercase;
   transition: all 0.4s;
+  padding-bottom: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   // remove hover transition
-  transform: translateY(60px);
+  // transform: translateY(60px);
+}
+
+.app-body__logo {
+  flex-grow: 1;
+  display: flex;
+}
+
+.app-body__label {
+  @include project-label;
 }
 
 .css-logo-animation-hack {
@@ -190,38 +229,58 @@ a {
 }
 
 .app-body__block {
+  font-family: "OTBrut";
   display: flex;
+  flex-direction: column;
   position: relative;
-  // justify-content: center;
   justify-content: space-evenly;
   align-items: center;
 
-  border: solid 1px lightgrey;
+  // border: solid 1px var(--theme-color-light);
   // outline: solid 1px black;
   // background-color: #f1f1f1;
 
   min-height: 250px;
-  max-width: 500px;
-  // box-shadow: 1px 1px 3px 1px #bfbfbf;
+  // max-width: 420px;
   transition: all 0.4s;
 
   justify-self: center;
   width: 100%;
-  // min-width: 80%;
+  box-sizing: border-box;
+  padding: 1rem;
 
   &:hover {
-    box-shadow: 1px 1px 10px 1px #bfbfbf;
+    // box-shadow: 1px 1px 10px 1px var(--theme-color-light);
     // transform: translateX(50px);
     // justify-content: space-evenly;
 
+    .app-body__title {
+      // box-shadow: 0 4px 6px -1px var(--theme-color-light);
+      // box-shadow: 0 6px 12px -4px var(--theme-color-light);
+
+      /* Original shadow that was bleeding: */
+      /* box-shadow: 0 6px 12px -4px var(--theme-color-light); */
+
+      /* New shadow for bottom-only effect: */
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: 0px 14px 16px -13px var(--theme-color);
+    }
+    // .app-body__title::after {
+    //   content: "";
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: -2px; /* sit just beneath the text block */
+    //   height: 6px; /* thickness of your glow */
+    //   background: var(--theme-color-light);
+    //   filter: blur(3px); /* soften into a glow */
+    //   opacity: 0.6;
+    //   pointer-events: none;
+    //   z-index: -1; /* send it behind the text */
+    // }
+
     .logo-container {
       transform: translateY(-20px);
-    }
-
-    .app-body__title {
-      // position: static;
-      transform: translateY(60px);
-      opacity: 1;
     }
 
     .css-logo-animation-hack {
@@ -247,154 +306,28 @@ a {
   }
 }
 
+.project__title--contact {
+  position: relative;
+  left: -1rem;
+}
+
+.profile__container {
+  margin-top: -3rem;
+}
+
 .profile-img {
   display: block;
   margin: 0 auto;
   width: 40%;
-}
+  position: relative;
+  filter: grayscale(100%) brightness(120%);
+  top: -6rem;
+  left: 6rem;
+  z-index: -1;
 
-.project {
-  position: absolute;
-
-  top: 0;
-
-  width: calc(100% - 300px);
-  height: 100%;
-  padding: 3em;
-  box-sizing: border-box;
-  overflow-y: auto;
-
-  background: white;
-
-  transition: 0.6s all ease-in-out;
-  box-shadow: 2px 0px 11px -1px black;
-}
-
-.project__title {
-  margin-top: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.project__content {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.project__button {
-  display: block;
-  margin: 2em auto;
-  min-width: 100px;
-  max-width: 100px;
-  padding: 0.5em 2em;
-  text-align: center;
-  color: black;
-  font-size: 14px;
-  box-shadow: 1px 1px 5px 1px lightgrey;
-  transition: 0.4s all;
-
-  &:hover {
-    box-shadow: 1px 1px 10px 1px lightgrey;
+  @media (prefers-color-scheme: dark) {
+    filter: grayscale(100%);
   }
-
-  &--contact {
-    display: inline-block;
-    margin: 0.5em 1em 0 0;
-  }
-}
-
-.project__close-button {
-  position: fixed;
-  fill: grey;
-  padding: 0;
-
-  background: none;
-  border: 0;
-
-  transition: all 0.4s;
-}
-
-.project__close-button-svg {
-  background: white;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.5rem;
-  box-sizing: border-box;
-  box-shadow: 1px 1px 5px -1px grey;
-}
-
-.project__justify-flex {
-  display: flex;
-  text-align: center;
-}
-
-.project__collaborators,
-.project__skills-used {
-  width: 100%;
-  text-align: center;
-
-  p {
-    line-height: 1em;
-  }
-}
-
-.project__image-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.project__image {
-  width: 100%;
-  margin: 1em 0;
-  align-self: center;
-
-  &--half {
-    width: 48%;
-  }
-}
-
-.project__image-caption {
-  margin-top: -1em;
-  text-align: center;
-}
-
-.project__mobile-container {
-  display: flex;
-  justify-content: space-between;
-
-  margin: 1em 0;
-}
-
-.project__mobile-image {
-  width: 33%;
-  align-self: center;
-}
-
-.project__video {
-  margin-top: 2em;
-}
-
-.project--hide {
-  right: calc(-100% + 300px);
-}
-
-.project--show {
-  right: 0;
-}
-
-.project__scroll-top {
-  margin: 1em auto;
-  width: 25px;
-  height: 25px;
-  padding: 10px;
-  box-sizing: content-box;
-  display: block;
-  border-radius: 50%;
-  border: none;
-  background: white;
-  box-shadow: 1px 1px 5px -1px grey;
-  fill: grey;
 }
 
 @media (max-width: 800px) {
@@ -430,34 +363,9 @@ a {
     margin: 1em 1.5em;
     padding: 1em;
     box-sizing: content-box;
-    fill: grey;
+    fill: var(--theme-color);
     background: none;
     border: none;
-  }
-
-  .project {
-    width: 100%;
-    padding: 1em;
-    z-index: 2;
-
-    &--hide {
-      right: -100%;
-
-      .project__close-button {
-        position: absolute;
-      }
-    }
-
-    .project__close-button {
-      margin-bottom: 1em;
-      bottom: 0;
-      right: 4em;
-    }
-  }
-
-  .app-body__title {
-    transform: translateY(60px);
-    opacity: 1;
   }
 
   .logo-container {
@@ -479,7 +387,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--shadow-color);
   text-align: center;
   z-index: 10;
 
@@ -488,7 +396,7 @@ a {
   }
 
   img {
-    box-shadow: 0 0 25px #111;
+    box-shadow: 0 0 25px var(--shadow-color);
     width: 95%;
     max-width: 1300px;
   }

@@ -1,4 +1,4 @@
-import "./assetcss/fanswifi.css";
+import "./assetcss/fanswifi.scss";
 
 export default function FanswifiLogo() {
   return (

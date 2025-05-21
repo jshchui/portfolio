@@ -8,29 +8,20 @@ export default function ProjectPackager() {
     <div className="project__content">
       <h1 className="project__title">Banner Packager</h1>
       <div className="project__eyebrow-container">
+        <p className="project__eyebrow">MY ROLE: DEVELOPMENT</p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>MY ROLE: DEVELOPMENT{" "}
-          <span className="project__eyebrow-symbol">◆</span>
+          TECH: NODE.JS x ELECTRON x SOCKET.IO x HTML2CANVAS
         </p>
+        <p className="project__eyebrow">PROJECT: WEB APP</p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>TECH: NODE.JS x
-          ELECTRON x SOCKET.IO x HTML2CANVAS
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>PROJECT: WEB APP{" "}
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>LINK:{" "}
+          LINK:{" "}
           <a
             href="https://github.com/jshchui/packager"
             rel="noopener noreferrer"
             target="_blank"
           >
             GITHUB
-          </a>{" "}
-          <span className="project__eyebrow-symbol">◆</span>
+          </a>
         </p>
       </div>
       <img className="project__image" src={Img1} alt="Packager UI" />

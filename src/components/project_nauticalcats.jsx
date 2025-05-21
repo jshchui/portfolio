@@ -13,19 +13,12 @@ export default function ProjectNauticalcats() {
       <h1 className="project__title">Nautical Cats</h1>
       <div className="project__eyebrow-container">
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>MY ROLE: GAME DESIGN
-          x PROTOTYPING x ANIMATION{" "}
-          <span className="project__eyebrow-symbol">◆</span>
+          MY ROLE: GAME DESIGN x PROTOTYPING x ANIMATION{" "}
         </p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>TECH: ILLUSTRATOR x
-          PHOTOSHOP x UNITY
-          <span className="project__eyebrow-symbol">◆</span>
+          TECH: ILLUSTRATOR x PHOTOSHOP x UNITY
         </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>PROJECT: GAME
-          DEVELOPMENT <span className="project__eyebrow-symbol">◆</span>
-        </p>
+        <p className="project__eyebrow">PROJECT: GAME DEVELOPMENT</p>
       </div>
       <img
         className="project__image"

@@ -166,7 +166,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`App ${projectShowing ? "App--hide-scroll" : ""}`}>
+    <div className={`App ${projectShowing ? "App--hide-scroll" : ""} theme-1`}>
       {/* Mobile Navigation */}
       <TopBanner />
       {/* <div className={showMobileMenu ? "nav nav--show-mobile" : "nav"}>

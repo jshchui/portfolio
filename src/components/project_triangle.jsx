@@ -6,19 +6,11 @@ export default function ProjectTriangle() {
     <div className="project__content">
       <h1 className="project__title">Tri-angle</h1>
       <div className="project__eyebrow-container">
+        <p className="project__eyebrow">MY ROLE: PROTOTYPE x DESIGN</p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>MY ROLE: PROTOTYPE x
-          DESIGN <span className="project__eyebrow-symbol">◆</span>
+          TECH: ILLUSTRATOR x COREL DRAW x SOLID WORKS
         </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>TECH: ILLUSTRATOR x
-          COREL DRAW x SOLID WORKS
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>PROJECT: PRODUCT
-          DESIGN <span className="project__eyebrow-symbol">◆</span>
-        </p>
+        <p className="project__eyebrow">PROJECT: PRODUCT DESIGN</p>
       </div>
 
       <p>

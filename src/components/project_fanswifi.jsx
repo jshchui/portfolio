@@ -9,29 +9,19 @@ export default function ProjectFanswifi() {
     <div className="project__content">
       <h1 className="project__title">Fanswifi</h1>
       <div className="project__eyebrow-container">
+        <p className="project__eyebrow">MY ROLE: WEB DESIGN x DEVELOPMENT</p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>MY ROLE: WEB DESIGN
-          x DEVELOPMENT <span className="project__eyebrow-symbol">◆</span>
+          TECH: PHOTOSHOP x ILLUSTRATOR x HTML/CSS x JAVASCRIPT
         </p>
+        <p className="project__eyebrow">PROJECT: WEBSITE</p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>TECH: PHOTOSHOP x
-          ILLUSTRATOR x HTML/CSS x JAVASCRIPT
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>PROJECT: WEBSITE{" "}
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>LINK:{" "}
           <a
             href="https://github.com/jshchui/fwnext"
             rel="noopener noreferrer"
             target="_blank"
           >
             GITHUB
-          </a>{" "}
-          <span className="project__eyebrow-symbol">◆</span>
+          </a>
         </p>
       </div>
       <p>

@@ -18,19 +18,11 @@ export default function ProjectRediscoverindigo() {
     <div className="project__content">
       <h1 className="project__title">Rediscover Indigo</h1>
       <div className="project__eyebrow-container">
+        <p className="project__eyebrow">MY ROLE: IDEATION x UX x MOTION</p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>MY ROLE: IDEATION x
-          UX x MOTION <span className="project__eyebrow-symbol">◆</span>
+          TECH: ILLUSTRATOR x AFTER EFFECTS x PREMIER PRO
         </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>TECH: ILLUSTRATOR x
-          AFTER EFFECTS x PREMIER PRO
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>PROJECT: UX / UI
-          DESIGN <span className="project__eyebrow-symbol">◆</span>
-        </p>
+        <p className="project__eyebrow">PROJECT: UX / UI DESIGN</p>
       </div>
       <p>
         Rediscover Indigo is a mobile and web platform, designed to allow

@@ -6,15 +6,18 @@
   --gray: #888888;
   --light-gray: #eeeeee;
   --dark-gray: #333333;
+  --red: #ed4856;
+  // --red: #ec1a2b;
   // --accent: #5f4dee;
-  --accent: var(--gray);
+  --accent: var(--red);
 
   //   color save
   // color: #3a3a3a; // h1-h3
 
   /* ─── Tone Variants via color-mix() ───────────────────────────────────────── */
-  --accent-light: color-mix(in srgb, var(--accent) 20%, var(--white));
-  --accent-dark: color-mix(in srgb, var(--accent) 20%, var(--black));
+  --accent-light: color-mix(in srgb, var(--accent) 30%, var(--white));
+  --accent-light-plus: color-mix(in srgb, var(--accent) 10%, var(--white));
+  --accent-dark: color-mix(in srgb, var(--accent) 90%, var(--black));
 
   /* ─── Semantic Tokens (auto-switching light/dark) ─────────────────────────── */
   --background-color: light-dark(var(--white), var(--dark-gray));
@@ -28,6 +31,27 @@
 
   --theme-color: light-dark(var(--accent), var(--accent-light));
   --theme-color-flipped: light-dark(var(--accent), var(--accent-dark));
+
+  --theme-color-light: light-dark(var(--light-gray), var(--light-gray));
+  --theme-color-light-flipped: light-dark(
+    var(--accent-light),
+    var(--accent-dark)
+  );
+}
+
+.theme-1 {
+  /* ─── Semantic Tokens (auto-switching light/dark) ─────────────────────────── */
+  --background-color: light-dark(var(--white), var(--dark-gray));
+  --shadow-color: light-dark(var(--dark-gray), var(--light-gray));
+
+  --font-color: light-dark(var(--gray), var(--white));
+  --font-color-flipped: light-dark(var(--white), var(--gray));
+
+  --title-color: light-dark(var(--accent), var(--light-gray));
+  --title-color-flipped: light-dark(var(--light-gray), var(--red));
+
+  --theme-color: light-dark(var(--accent), var(--accent-light));
+  --theme-color-flipped: light-dark(var(--accent), var(--red));
 
   --theme-color-light: light-dark(var(--light-gray), var(--light-gray));
   --theme-color-light-flipped: light-dark(

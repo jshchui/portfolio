@@ -16,19 +16,11 @@ export default function ProjectWerewolf() {
     <div className="project__content">
       <h1 className="project__title">Werewolf</h1>
       <div className="project__eyebrow-container">
+        <p className="project__eyebrow">MY ROLE: DESIGN x DEVELOPMENT</p>
         <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>MY ROLE: DESING x
-          DEVELOPMENT <span className="project__eyebrow-symbol">◆</span>
+          TECH: REACT x FIREBASE DATABASE / CLOUD FUNCTIONS x ILLUSTRATOR
         </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>TECH: REACT x
-          FIREBASE DATABASE / CLOUD FUNCTIONS x ILLUSTRATOR
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
-        <p className="project__eyebrow">
-          <span className="project__eyebrow-symbol">◆</span>PROJECT: WEB APP{" "}
-          <span className="project__eyebrow-symbol">◆</span>
-        </p>
+        <p className="project__eyebrow">PROJECT: WEB APP</p>
       </div>
       <img className="project__image" src={Banner} alt="Werewolf Banner" />
 

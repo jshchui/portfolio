@@ -1,4 +1,4 @@
-import "./assetcss/nautical.css";
+import "./assetcss/nautical.scss";
 
 export default function NauticalLogo() {
   return (

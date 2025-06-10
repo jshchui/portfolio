@@ -1,0 +1,44 @@
+.logo-container--micron {
+  min-width: 170px;
+  max-width: 170px;
+}
+
+.cls-micron {
+  fill: var(--accent);
+  //   animation: logoFadeIn 1s ease-out forwards;
+  //   fill: transparent;
+  stroke: var(--accent);
+  stroke-width: 1;
+  stroke-dasharray: 1000; /* ≥ path length */
+  stroke-dashoffset: 1000; /* hide the stroke */
+}
+
+.app-body__block:hover .logo-container--micron path {
+  animation: drawAndFill 2.5s ease-in-out infinite alternate;
+}
+.logo-container--micron path {
+  fill: var(--accent);
+  stroke: var(--accent);
+  stroke-width: 1;
+  stroke-dasharray: 1000; /* ≥ total path length */
+  stroke-dashoffset: 0; /* shown */
+}
+
+/* 3) Keyframes for draw + fill */
+@keyframes drawAndFill {
+  /* jump straight to hidden state */
+  0% {
+    stroke-dashoffset: 1000; /* hide stroke */
+    fill: transparent; /* hide fill */
+  }
+  /* draw the stroke by 60% of the animation */
+  80% {
+    stroke-dashoffset: 0; /* stroke fully visible */
+    // fill: transparent; /* still no fill */
+  }
+  /* at the end, fill it in */
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--accent);
+  }
+}

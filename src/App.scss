@@ -182,6 +182,10 @@ a {
     padding: 2rem 0;
     color: var(--title-color);
     letter-spacing: 0.05em;
+
+    @media (max-width: 500px) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -196,6 +200,7 @@ a {
   position: relative;
   translate: 0 6px;
 }
+
 .app-body__title {
   border-bottom: solid 1px var(--theme-color-light);
   // position: absolute;

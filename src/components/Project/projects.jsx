@@ -11,6 +11,7 @@ import ProjectFanswifi from "../project_fanswifi";
 import ProjectNauticalcats from "../project_nauticalcats";
 import ProjectRediscoverindigo from "../project_rediscoverindigo";
 import ProjectPackager from "../project_packager";
+import ProjectMicron from '../project_micron'
 import ContactPage from "../contact";
 
 export default function Project({
@@ -25,6 +26,8 @@ export default function Project({
     switch (currentProject) {
       case `${hostName}packager`:
         return <ProjectPackager />;
+      case `${hostName}micron`:
+        return <ProjectMicron />;
       case `${hostName}haikugenerator`:
         return <ProjectHaikugenerator />;
       case `${hostName}werewolf`:

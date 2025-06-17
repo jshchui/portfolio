@@ -16,6 +16,7 @@ import Resume from "./assets/resume.pdf";
 
 import { Routes, Route, Link } from "react-router";
 import NauticalLogo from "./assets/nautical";
+import MicronLogo from "./assets/micron";
 
 function App() {
   const projectContainerRef = useRef(null);
@@ -38,6 +39,12 @@ function App() {
   console.log("hostName: ", hostName);
 
   const projectData = [
+    {
+      key: "micron",
+      title: "Micron Brandsite",
+      label: "Website",
+      Logo: <MicronLogo aria-label="logo" />,
+    },
     {
       key: "packager",
       title: "Packager",

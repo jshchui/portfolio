@@ -1,63 +1,60 @@
-import ImgHomescreen from "./../assets/fanswifi/homescreen.JPG";
-import ImgCustomer from "./../assets/fanswifi/customer.JPG";
-import ImgProduct from "./../assets/fanswifi/product.JPG";
-import ImgWhitelabeling from "./../assets/fanswifi/whitelabeling.JPG";
-import ImgWhois from "./../assets/fanswifi/whois.JPG";
+import ImgTitlepage from "./../assets/micron/titlepage.png";
+import ImgPart1 from "./../assets/micron/part1.png";
+import ImgPart2 from "./../assets/micron/part2.png";
+import ImgPart3 from "./../assets/micron/part3.png";
+import ImgPart4 from "./../assets/micron/part4.png";
+import ImgPart5 from "./../assets/micron/part5.png";
+import ImgPart6 from "./../assets/micron/part6.png";
+import ImgPart7 from "./../assets/micron/part7.png";
+import ImgEndingpage from "./../assets/micron/endingpage.png";
 
-export default function ProjectFanswifi() {
+export default function ProjectMicron() {
   return (
     <div className="project__content">
-      <h1 className="project__title">Fanswifi</h1>
+      <h1 className="project__title">Micron Brandsite</h1>
       <div className="project__eyebrow-container">
-        <p className="project__eyebrow">MY ROLE: WEB DESIGN x DEVELOPMENT</p>
+        <p className="project__eyebrow">MY ROLE: DEVELOPMENT</p>
         <p className="project__eyebrow">
-          TECH: PHOTOSHOP x ILLUSTRATOR x HTML/CSS x JAVASCRIPT
+          TECH: NEXTJS x GSAP
         </p>
         <p className="project__eyebrow">PROJECT: WEBSITE</p>
         <p className="project__eyebrow">
           <a
-            href="https://github.com/jshchui/fwnext"
+            href="https://www.brand.micron.com/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            GITHUB
+            Brandsite
           </a>
         </p>
       </div>
       <p>
-        Fanswifi is a social, wifi hotspot platform with built in analytics for
-        market insight, allowing their clients to gather valuable insights about
-        their customers.
+        As part of Micron’s global rebranding initiative, I helped bring their bold new identity to life by developing an immersive brand microsite
       </p>
 
       <p>
-        For their exhibition in Singapore, I redesigned and developed their
-        website to clearly articulate business values to their clients.
+        The site blends scroll-triggered animations with subtle sound design to create a polished, high-impact digital experience. I led the frontend development and was also responsible for selecting and implementing the animation tech stack. This included choosing performant libraries for scroll-based interactivity and integrating them seamlessly with the site's architecture.
       </p>
 
       <div className="project__divider">❋</div>
 
       <img
         className="project__image"
-        src={ImgHomescreen}
-        alt="Fanswifi Homepage"
+        src={ImgTitlepage}
+        alt="Micron Brandsite Title Page"
       />
 
-      <img className="project__image" src={ImgWhois} alt="Fanswifi Audience" />
+      <img className="project__image" src={ImgPart1} alt="Micron Part 1" />
+      <img className="project__image" src={ImgPart2} alt="Micron Part 2" />
+      <img className="project__image" src={ImgPart3} alt="Micron Part 3" />
+      <img className="project__image" src={ImgPart4} alt="Micron Part 4" />
+      <img className="project__image" src={ImgPart5} alt="Micron Part 5" />
+      <img className="project__image" src={ImgPart6} alt="Micron Part 6" />
+      <img className="project__image" src={ImgPart7} alt="Micron Part 7" />
       <img
         className="project__image"
-        src={ImgProduct}
-        alt="Fanswifi Instructions"
-      />
-      <img
-        className="project__image"
-        src={ImgWhitelabeling}
-        alt="Fanswifi White Labeling"
-      />
-      <img
-        className="project__image"
-        src={ImgCustomer}
-        alt="Fanswifi Customers"
+        src={ImgEndingpage}
+        alt="Micron Brandsite Ending Page"
       />
     </div>
   );

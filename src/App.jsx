@@ -41,7 +41,7 @@ function App() {
   const projectData = [
     {
       key: "micron",
-      title: "Micron",
+      title: "Micron Brandsite",
       label: "Website",
       Logo: <MicronLogo aria-label="logo" />,
     },
